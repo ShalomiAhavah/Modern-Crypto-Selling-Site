@@ -5,18 +5,649 @@
 @bright-blue: #1ee0e1;
 @transparent-white: hsl(0 0 100 3%);
 @dark-blue: #0d0d2d;
+@white: #ffff;
+@btn-color: #1a0f30;
+@dark-white: #757575;
 
 //Reset
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  text-wrap: balance;
-  font-family: Axiforma;
+  //border: 1px solid @magenta;
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  z-index: 3;
 }
 
 //Start
 
 body {
+  height: 100vh;
+  font-family: "Axiforma";
   background: @dark;
+  padding: 4vw 5vw 0 5vw;
+  overflow-x: hidden;
+}
+
+body > * {
+  position: absolute;
+}
+
+.inactive {
+  filter: grayscale(80%);
+}
+
+.hide {
+  display: none !important;
+}
+
+.section {
+  color: @white;
+  width: 90vw;
+  text-align: center;
+}
+
+.light-blue-italic {
+  font-weight: 200;
+  color: @bright-blue;
+  font-style: italic;
+}
+
+.divider {
+  width: 90vw;
+  height: 2px;
+  margin: 5vh 0;
+  background-color: @white;
+  opacity: 17%;
+}
+
+// * GRADIENTS ------------------------------------
+.gardient {
+  position: absolute;
+  z-index: 1;
+}
+
+.gradient1 {
+  height: 150vh;
+  width: 150vh;
+  margin: 1vh -30vh;
+  background: radial-gradient(rgba(201, 87, 255, 1), rgba(40, 203, 255, 1));
+  border-radius: 100%;
+  opacity: 12%;
+  filter: blur(100px);
+  z-index: 1;
+}
+
+.gradient2 {
+  height: 150vh;
+  width: 150vh;
+  margin: -50vh 80vh;
+  background: @magenta;
+  border-radius: 100%;
+  opacity: 9%;
+  filter: blur(100px);
+  z-index: 1;
+}
+
+// * HERO----------------------------------------
+
+hero {
+  width: 90%;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: @white;
+}
+
+.menu {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.25vw;
+}
+
+.menu-link {
+  color: @white;
+  opacity: 57%;
+}
+.menu-link:hover {
+  opacity: 75%;
+}
+.current {
+  opacity: 98%;
+}
+
+.get-in-touch {
+  width: 13vw;
+  height: 3.5vw;
+  font-size: 1.5vw;
+  line-height: 3.5vw;
+  background: linear-gradient(#1a0f30, #1a0f30) padding-box,
+    linear-gradient(to right, rgba(229, 10, 167, 1), rgba(255, 23, 189, 0.45))
+      border-box;
+  border-radius: 5px;
+  border: 1.65px solid transparent;
+  font-weight: 700;
+}
+
+// * Header section----------------------------------------
+
+.section1 {
+  height: max-content;
+  margin: 13vh auto;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+.section1-text {
+  width: 38vw;
+  margin: 20vh 0;
+}
+
+.section1-text h1 {
+  font-size: 3.75vw;
+}
+
+.explore-nfts {
+  width: 14vw;
+  height: 3.5vw;
+  margin: 4vh 0;
+  background: linear-gradient(to right, @magenta, @pink);
+  font-size: 1.35vw;
+  font-weight: 600;
+  line-height: 3.5vw;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 40px 20px rgba(229, 10, 167, 0.193);
+  transition: background 300ms ease;
+}
+.explore-nfts:hover {
+  background: linear-gradient(40deg, @magenta, @pink);
+  box-shadow: 0 0 40px 10px rgba(229, 10, 167, 0.393);
+}
+
+.spiral {
+  position: absolute;
+  margin: -4vh 20vw;
+}
+
+.section1-union {
+  position: absolute;
+  margin-left: 51vw;
+
+  .union {
+    width: 45vw;
+  }
+}
+
+.featured-nft {
+  width: 35vw;
+  position: absolute;
+  margin: 3.25vw -42vw;
+  border-radius: 100%;
+}
+
+.feature-info {
+  height: 23vh;
+  width: 23vh;
+  margin: -30vw 0;
+  background: #07003e;
+  position: absolute;
+  border: 1.5px solid @pink;
+  border-radius: 100%;
+  color: @white;
+  padding: 37px 15px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+// * Stats -----------------------------
+.overview {
+  margin: -5vw 0 10vw 1vw;
+  color: @white;
+}
+.overview h2 {
+  font-size: 2rem;
+  display: inline;
+}
+
+.overview img {
+  scale: 1;
+  display: inline;
+  margin: 0 0 -2.2vh 0;
+}
+
+.stats {
+  width: 53vw;
+  display: flex;
+  justify-content: space-between;
+  color: @white;
+}
+
+.stat h5 {
+  margin: 2vh 0 0 0;
+  color: #cbcbcb;
+  font-weight: 400;
+  font-size: 1.3vw;
+}
+
+.stat h4 {
+  font-size: 2.3vw;
+}
+
+// * NFTs-------------------------
+.nft-section {
+  color: @white;
+  width: 90vw;
+
+  > h2 {
+    margin: 2vh auto;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  > .filterList {
+    width: 60vw;
+    margin: 0 auto 1vh auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 1.35rem;
+    > div {
+      width: 10.69vw;
+      height: 3.4vw;
+      line-height: 3.2vw;
+      text-align: center;
+      opacity: 65%;
+    }
+
+    div:hover {
+      opacity: 100%;
+      cursor: pointer;
+    }
+
+    div.active {
+      background: url(/resources/Active\ -ellipses.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 100%;
+    }
+  }
+}
+
+.nft-container {
+  width: 90vw;
+  margin: 10vh 0vw;
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  place-content: center;
+  row-gap: 2vw;
+}
+
+.nft {
+  height: 37vw;
+  width: 26vw;
+  background: @btn-color;
+  border-radius: 15px;
+  padding: 1.6vw;
+  color: @white;
+  overflow: hidden;
+
+  .nft-image-container {
+    width: 22.8vw;
+    height: 28vw;
+    display: block;
+    margin: 0 0 1vw 0;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  .nft-img {
+    width: 22.8vw;
+    height: 28vw;
+    position: absolute;
+  }
+
+  .like-button {
+    padding: 1vh;
+    position: relative;
+    top: 0.8vw;
+    left: 19.6vw;
+    border-radius: 10px;
+    background: #cbcbcb75;
+    filter: contrast(10%);
+    cursor: pointer;
+  }
+
+  .liked {
+    filter: contrast(100%) !important;
+  }
+
+  h3 {
+    display: inline;
+    font-size: 1.15rem;
+  }
+
+  .score-container {
+    width: 4vw;
+    margin-left: 6rem;
+
+    > img {
+      height: 2.3vw;
+      margin-bottom: -1vh;
+    }
+
+    > h2 {
+      font-size: 0.9rem;
+    }
+  }
+
+  .stars {
+    width: 7.5vw;
+    margin: 1vh 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    > img {
+      scale: 1.1;
+    }
+  }
+
+  .buy-nft {
+    height: 3.5vw;
+    width: 22.8vw;
+    margin: 13vh auto 0 auto;
+    border: none;
+    border-radius: 10px;
+    color: @white;
+    font-size: 1.35vw;
+    font-weight: 600;
+    line-height: 3.5vw;
+    background: linear-gradient(to right, @magenta, @pink);
+    box-shadow: 0 0 30px 20px rgba(229, 10, 167, 0.089);
+    cursor: pointer;
+  }
+
+  .buy-nft:hover {
+    background: linear-gradient(160deg, @magenta, @pink);
+    box-shadow: 0 0 30px 20px rgba(229, 10, 167, 0.129);
+  }
+}
+
+.nft-active {
+  height: 22.8vw !important;
+  width: 22.8vw;
+  overflow: hidden;
+  transition: 400ms ease;
+  > .nft-img {
+    scale: 1.1;
+    transition: 500ms ease;
+  }
+}
+.explore-all-btn {
+  width: 17vw;
+  margin: 7vh auto 10vh auto;
+  display: block;
+  font-size: 1.35rem;
+  color: @white;
+  background: linear-gradient(#1a0f30, #1a0f30) padding-box,
+    linear-gradient(to right, rgba(229, 10, 167, 1), rgba(255, 23, 189, 0.256))
+      border-box;
+  box-shadow: 0 0 60px 7px #1a0f30;
+}
+
+.explore-all-btn:hover {
+  background: linear-gradient(#221439, #221439) padding-box,
+    linear-gradient(to right, rgba(229, 10, 167, 1), rgba(255, 23, 189, 0.15))
+      border-box;
+}
+
+// * How to section --------------------------------
+
+.how-etc-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .unique-files {
+    height: 3vw;
+    width: 12vw;
+    margin: 2vh auto;
+    padding: 3px 1vw;
+    background: linear-gradient(to right, #1ee1e19a, @dark);
+    color: @white;
+    font-size: 1.2rem;
+    line-height: 3vw;
+    border-radius: 100px 0 0 100px;
+  }
+
+  .how-to-heading {
+    font-size: 2.5rem;
+    margin-bottom: 10vh;
+  }
+
+  .steps-container {
+    margin-bottom: 15vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    gap: 2vw;
+
+    .icon {
+      position: absolute;
+      left: 35vw;
+    }
+
+    h4 {
+      top: 22%;
+      left: 3vw;
+      font-size: 1.5rem;
+      position: absolute;
+    }
+
+    p {
+      width: 37vw;
+      top: 47%;
+      left: 3vw;
+      font-size: 1.2rem;
+      position: absolute;
+      opacity: 80%;
+    }
+  }
+}
+
+//* Browse Section -------------------------------------
+.browse-section {
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    width: 40vw;
+    margin: 3vh auto;
+    font-size: 1.2rem;
+    opacity: 80%;
+  }
+
+  .pictures img {
+    display: inline;
+    margin: 1.8vh;
+  }
+
+  button {
+    font-size: 1.25rem;
+  }
+}
+
+//* Logos ---------------------------------
+
+.logos {
+  display: flex;
+  justify-content: space-evenly;
+
+  img {
+    scale: 0.8;
+  }
+}
+
+//* News ------------------------
+
+.news-section {
+  width: 95vw;
+  margin: 15vh auto;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+
+  .news-text {
+    width: 35vw;
+    padding: 2vw;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    img {
+      margin-bottom: 2vh;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 80%;
+    }
+
+    button {
+      scale: 0.9;
+    }
+  }
+
+  .news-feature {
+    margin: 0 2vw;
+    cursor: pointer;
+
+    img {
+      border-radius: 15px;
+    }
+
+    .news-date {
+      margin: 2vh 0;
+      font-size: 1.1rem;
+      opacity: 80%;
+    }
+
+    h3 {
+      width: 28vw;
+      font-size: 1.7rem;
+    }
+  }
+}
+
+//* Footer ----------------------------
+.footer-section {
+  width: 90vw;
+
+  .contact {
+    h2 {
+      font-size: 4rem;
+      text-shadow: 2px -2px 10px @bright-blue;
+    }
+    .contact p {
+      width: 40vw;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
+    input {
+      height: 4.5vw;
+      width: 45vw;
+      margin: 3vh auto;
+      padding: 0 2vh;
+      background-color: @dark-blue;
+      border: none;
+      border-radius: 15px;
+      font-size: 1.35rem;
+    }
+    #email:focus,
+    #email:active {
+      outline: 1px solid @bright-blue;
+    }
+  }
+
+  button {
+    display: block;
+    margin: 2vh auto;
+    box-shadow: 0 0 40px 7px #1a0f30;
+  }
+  button:hover {
+    box-shadow: 0 0 40px 7px #1a0f3083;
+  }
+}
+
+.contact-details {
+  margin: 15vh auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+
+  .contact-item {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .circle-out {
+    width: 6vw;
+    height: 6vw;
+    margin: 2vh 0 4vh 0;
+    display: grid;
+    place-content: center;
+    background: #1a124f;
+    border-radius: 100px;
+  }
+  .circle-in {
+    width: 3.5vw;
+    height: 3.5vw;
+    background: #100943;
+    border-radius: 100px;
+  }
+}
+
+.socials {
+  width: 15vw;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .social {
+    height: 2.75vw;
+    width: 2.75vw;
+    display: grid;
+    place-content: center;
+    background-color: #1a124f;
+    border-radius: 100px;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .shortcuts {
+    width: 25vw;
+    display: inherit;
+    justify-content: space-between;
+    color: @dark-white;
+  }
+  .shortcuts a:hover {
+    color: @white;
+  }
 }

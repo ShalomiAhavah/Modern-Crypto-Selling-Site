@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/breakpoint-styling.css">
     <link rel="stylesheet" href="resources/Axiforma/stylesheet.css">
     <title>KNFT</title>
 </head>
 <body>
+    <div class="gradient1"></div>
+    <div class="gradient2"></div>
     <hero>
         <img src="/resources/KNFT..png" alt="KNFT logo" class="logo">
         <div class="menu">
-            <a href="#" class="menu-link">Home</a>
+            <a href="index.html" class="menu-link current">Home</a>
             <a href="#" class="menu-link">All NFTs</a>
             <a href="#" class="menu-link">Team</a>
             <a href="#" class="menu-link">Terms & Co.</a>
@@ -19,6 +22,292 @@
         </div>
         <button class="get-in-touch">Get in Touch</button>
     </hero>
-    
+
+    <main>
+        <div class="section1 section" id="home">
+            <div class="section1-text">
+                <h1>Buy, Create & <br>Sell <span class="light-blue-italic">Unique NFTs</span> File.</h1>
+                <p>NFTs are used for digital art and collectibles, GameFi projects, metaverses, and more.</p>
+                <button class="explore-nfts">Explore NFTs</button>
+                <img src="/resources/image 6.png" alt="" class="spiral">
+            </div>
+            <div class="section1-union">
+                <img src="/resources/Union.png" alt="" class="union">
+                <img src="/resources/Top img.png" alt="" class="featured-nft">
+                <div class="feature-info">Cyber Samurai #177</div>
+            </div>
+        </div>
+        <div class="overview">
+                <img src="/resources/eye.png" alt="">
+                <h2>Nico NFT Marketplace Overview</h2>
+                <div class="stats">
+                    <div class="stat">
+                        <h5>World Arts</h5>
+                        <h4>30.000 +</h4>
+                    </div>
+                    <div class="stat">
+                        <h5>Digital Artists</h5>
+                        <h4>17.000 +</h4>
+                    </div>
+                    <div class="stat">
+                        <h5>Live Auctions</h5>
+                        <h4>22.000 +</h4>
+                    </div>
+                    <div class="stat">
+                        <h5>Unique Products</h5>
+                        <h4>50.000 +</h4>
+                    </div>
+
+                </div>
+        </div>
+        <div class="nft-section">
+            <h2><span class="light-blue-italic">Most Popular</span> NFTs</h2>
+            <div class="filterList">
+                <div class="type active all filter" id="all-filter">All</div>
+                <div class="type prime filter" id="hape-filter">Hape prime</div>
+                <div class="type lions filter" id="lions-filter">Lazy Lions</div>
+                <div class="type ape filter" id="ape-filter">Peaceful Ape</div>
+            </div>
+        <div class="nft-container">
+            <div class="nft all lazy-lions lions">
+                <div class="nft-image-container">
+                    <img src="/resources/image 8.png" alt="NFT" class="nft-img">
+                    <img src="/resources/Heart Suit.png" alt="Like Button" class="like-button">
+                </div>
+                <h3>Cyber Saurai #575</h3>
+                <span class="score-container">
+                    <img src="/resources/Ethereum.png" alt="" class="Ethereum">
+                    <h3 class="score">7.5</h3>
+                </span>
+                <span class="stars">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating inactive">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating inactive">
+                </span>
+                <button class="buy-nft" onmouseover="nftActiveStyling()">Buy Product</button>
+            </div>
+
+            <div class="nft all hape-prime prime">
+                <div class="nft-image-container">
+                    <img src="/resources/image 10.png" alt="NFT" class="nft-img">
+                    <img src="/resources/Heart Suit.png" alt="Like Button" class="like-button">
+                </div>
+                <h3>Cyber Saurai #784</h3>
+                <span class="score-container">
+                    <img src="/resources/Ethereum.png" alt="" class="Ethereum">
+                    <h3 class="score">15.5</h3>
+                </span>
+                <span class="stars">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating inactive">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating inactive">
+                </span>
+                <button class="buy-nft">Buy Product</button>
+            </div>
+
+            <div class="nft all peaceful-ape ape">
+                <div class="nft-image-container">
+                    <img src="/resources/image 7.png" alt="NFT" class="nft-img">
+                    <img src="/resources/Heart Suit.png" alt="Like Button" class="like-button">
+                </div>
+                <h3>Cyber Saurai #475</h3>
+                <span class="score-container">
+                    <img src="/resources/Ethereum.png" alt="" class="Ethereum">
+                    <h3 class="score">8.5</h3>
+                </span>
+                <span class="stars">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating inactive">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating inactive">
+                </span>
+                <button class="buy-nft">Buy Product</button>
+            </div>
+
+            <div class="nft all peaceful-ape ape">
+                <div class="nft-image-container">
+                    <img src="/resources/image 11.png" alt="NFT" class="nft-img">
+                    <img src="/resources/Heart Suit.png" alt="Like Button" class="like-button">
+                </div>
+                <h3>Cyber Saurai #785</h3>
+                <span class="score-container">
+                    <img src="/resources/Ethereum.png" alt="" class="Ethereum">
+                    <h3 class="score">7.5</h3>
+                </span>
+                <span class="stars">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating inactive">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating inactive">
+                </span>
+                <button class="buy-nft" onmouseover="nftActiveStyling()">Buy Product</button>
+            </div>
+
+            <div class="nft all hape-prime prime">
+                <div class="nft-image-container">
+                    <img src="/resources/image 12.png" alt="NFT" class="nft-img">
+                    <img src="/resources/Heart Suit.png" alt="Like Button" class="like-button">
+                </div>
+                <h3>Cyber Saurai #784</h3>
+                <span class="score-container">
+                    <img src="/resources/Ethereum.png" alt="" class="Ethereum">
+                    <h3 class="score">7.5</h3>
+                </span>
+                <span class="stars">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating inactive">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating inactive">
+                </span>
+                <button class="buy-nft">Buy Product</button>
+            </div>
+
+            <div class="nft all lazy-lions lions">
+                <div class="nft-image-container">
+                    <img src="/resources/image 13.png" alt="NFT" class="nft-img">
+                    <img src="/resources/Heart Suit.png" alt="Like Button" class="like-button">
+                </div>
+                <h3>Cyber Saurai #475</h3>
+                <span class="score-container">
+                    <img src="/resources/Ethereum.png" alt="" class="Ethereum">
+                    <h3 class="score">15.5</h3>
+                </span>
+                <span class="stars">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating inactive">
+                    <img src="/resources/Christmas Star.png" alt="" class="rating inactive">
+                </span>
+                <button class="buy-nft">Buy Product</button>
+            </div>
+        </div>
+        <button class="explore-all-btn get-in-touch">Explore All NFTs</button>
+        </div>
+        <div class="how-etc-section section">
+            <h4 class="unique-files">UNIQUE FILES</h3>
+            <h3 class="how-to-heading">How to <span class="light-blue-italic">Create & Sell</span> Your NFT Files</h3>
+            <div class="steps-container">
+                <div class="step" id="step1">
+                    <img src="/resources/Subtract.png" alt="" class="subtract">
+                    <img src="/resources/Coin Wallet.png" alt="" class="icon">
+                    <h4>Set up Your Wallet</h4>
+                    <p>Connect your wallet to Nico by clicking the wallet icon in the top right corner after you've set it up.</p>
+                </div>
+                <div class="step" id="step2">
+                    <img src="/resources/Subtract.png" alt="" class="subtract">
+                    <img src="/resources/Add New.png" alt="" class="icon">
+                    <h4>Create Unique Connections</h4>
+                    <p>Set a secondary sales fee and add social links, a description, profile and banner images, and a description.</p>
+                </div>
+                <div class="step" id="step3">
+                    <img src="/resources/Subtract.png" alt="" class="subtract">
+                    <img src="/resources/NFT.png" alt="" class="icon">
+                    <h4>Download NFTs</h4>
+                    <p>Add a title and description to your work (picture, video, audio, or 3D art), then customize your NFTs with properties.</p>
+                </div>
+                <div class="step" id="step4">
+                    <img src="/resources/Subtract.png" alt="" class="subtract">
+                    <img src="/resources/Sell.png" alt="" class="icon">
+                    <h4>Put Them Up for Sale</h4>
+                    <p>Auctions, fixed-price listings, and declining-price listings are all options. You decide how you'd like to sell your NFTs.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="browse-section section">
+            <h3><span class="light-blue-italic">Browse by </span> Category</h3>
+            <p>Set a secondary sales fee and add social links, a description, profile and banner images, and a description.</p>
+            <div class="pictures">
+                <img src="/resources/unsplash_bU8TeXhsPcY.png" alt="">
+                <img src="/resources/unsplash_HSXIp58yPyI.png" alt="">
+                <img src="/resources/unsplash_ZhQCZjr9fHo.png" alt="">
+                <img src="/resources/unsplash_HnUHOBuJ7s4.png" alt="">
+            </div>
+            <button class="get-in-touch explore-all-btn">Explore NFTs Category</button>
+        </div>
+        <div class="logos">
+            <img src="/resources/image 59.png" alt="">
+            <img src="/resources/image 60.png" alt="">
+            <img src="/resources/image 61.png" alt="">
+            <img src="/resources/image 62.png" alt="">
+            <img src="/resources/image 63.png" alt="">
+            <img src="/resources/image 64.png" alt="">
+        </div>
+        <div class="news-section section">
+            <div class="news-text">
+                <img src="/resources/newspaper.png" alt="news">
+                <h2><span class="light-blue-italic">Trending </span> Crypto Market News</h2>
+                <p>Set a secondary sales fee and add social links, a description, profile and banner images, and a description.</p>
+                <button class="pink-btn explore-nfts">Explore NFTs</button>
+            </div>
+            <div class="news-feature" id="news1">
+                <img src="/resources/unsplash_voe-XbwNlGQ.png" alt="">
+                <p class="news-date">April 18, 2022</p>
+                <h3>Few Reasons to Sell NFTs on Nico</h3>
+            </div>
+            <div class="news-feature" id="news2">
+                <img src="/resources/unsplash_hQIJon1QhZ8.png" alt="">
+                <p class="news-date">April 18, 2022</p>
+                <h3>Few Reasons to Sell NFTs on Nico</h3>
+            </div>
+        </div>
+        <div class="footer-section section">
+            <div class="contact">
+                <h2>Get in Touch</h2>
+                <p>Set a secondary sales fee and add social links, a description, profile and banner images, and a description.</p>
+                <input type="email" name="contact-email" id="email" placeholder="Enter your email adress">
+                <button class="explore-nfts">Contact Us</button>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="circle-out">
+                            <div class="circle-in"></div>
+                        </div>
+                        <p>example@gmail.com<br>sample@yahoo.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="circle-out">
+                            <div class="circle-in"></div>
+                        </div>
+                        <p>We are on Telegram<br>@NicoCryptoChannel</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="circle-out">
+                            <div class="circle-in"></div>
+                        </div>
+                        <p>+1 800 123 456 789<br>+1 800 123 456 780</p>
+                    </div>
+                </div>
+                <div class="socials">
+                    <a href="" class="social"><img src="/resources/Vector (1).png" alt=""></a>
+                    <a href="" class="social"><img src="/resources/Vector (2).png" alt=""></a>
+                    <a href="" class="social"><img src="/resources/Vector (3).png" alt=""></a>
+                    <a href="" class="social"><img src="/resources/Vector.png" alt=""></a>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="footer">
+                <p class="copyright">Copyright © 2022 Nazmul Shanto. All Rights Reserved</p>
+                <div class="shortcuts">
+                    <a href="#home">Home</a>
+                    <a href="#nfts">All NFTs</a>
+                    <a href="#">Team</a>
+                    <a href="#">Terms & Co</a>
+                    <a href="#email">Contact</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
